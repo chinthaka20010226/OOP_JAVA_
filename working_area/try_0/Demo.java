@@ -8,7 +8,7 @@ import java.util.*;
     int dbmsMarks;
     int prfMarks;
 
-}
+}    
 
 class Example{
     public static void main(String args[]){
