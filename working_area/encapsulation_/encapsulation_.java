@@ -135,19 +135,237 @@ import javax.swing.*;
 
 // ================================================================================================
 
-class Demo{
+/*class Demo{
     public static void main(String args[]){
          Box b1=new Box();
          
          b1.setSize(10,5,3);
         
+         b1.printVolume();
          int vol=b1.findVolume();
          System.out.println("Volume is "+vol);
 
+         b1.printArea();
          int area=b1.findArea();
          System.out.println("Area is "+area);
+
+         b1.setLength(11);
+         b1.setWidth(7);
+         b1.setHeight(5);
+         System.out.println("Length is "+b1.getLength()+"\n"+
+                            "Width is "+b1.getWidth()+"\n"+
+                            "Height is "+b1.getHeight());
+    }
+}*/
+
+
+// ======================================================================================================
+
+// ----> Case 01
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1;        //Create a refference variable type 'Box'       ===> int[] arr,
+         b1=new Box();  //Create an object and assign the address to b1 ===> arr=new int[];
+         b1.length=12;  //Access the propertice
+    }
+}*/
+
+
+// ----> Case 02
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void printVolume(){
+         int volume;                              //local variable
+         volume = length*width*height;            //find 'length','width','height' in this method,
+         System.out.println("Volume is "+volume);
+    }
+
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1;
+         b1=new Box();
+         b1.length=12;
+         b1.width=5;
+         b1.height=3;
+         b1.printVolume();
+    }   
+
+}*/
+
+
+// ----> Case 03(parameterized method)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void setSize(int l,int w,int h){
+         length=l;
+         width=w;
+         height=h;
+    }
+
+    public void printVolume(){
+         int volume;
+         volume=length*width*height;
+         System.out.println("Volume is "+volume);
     }
 }
+
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box();
+         
+         b1.setSize(12,5,3);
+
+         b1.printVolume();
+    }
+}*/
+
+
+// ----> Case 04(return type method)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void setSize(int l,int w,int h){
+         length=l;
+         width=w;
+         height=h;
+    }
+
+    public int getVolume(){
+         int volume;
+         volume=length*width*height;
+         return volume;
+    }
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box();
+         
+         b1.setSize(12,5,3);
+
+         int vol = b1.getVolume();
+         System.out.println("Volume is "+vol);
+    }
+}*/
+
+
+// ----> Case 05(Default value)
+
+/*class Box{
+    byte a;
+    short b;
+    int c;
+    long d;
+    float e;
+    double f;
+    char g;
+    boolean h;
+     
+    String s;
+    int[] xr;
+    Date d1;
+    Box b_;
+
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box();
+
+         System.out.println("byte :"+b1.a);       //0
+         System.out.println("short :"+b1.b);      //0
+         System.out.println("int :"+b1.c);        //0
+         System.out.println("long :"+b1.d);       //0
+         System.out.println("float :"+b1.e);      //0.0
+         System.out.println("double :"+b1.f);     //0.0
+         System.out.println("char :"+b1.g);       //
+         System.out.println("boolean :"+b1.h);    //false
+         System.out.println("String :"+b1.s);     //null
+         System.out.println("int[] xr :"+b1.xr);  //null
+         System.out.println("Date :"+b1.d1);      //null
+         System.out.println("Box :"+b1.b_);       //null
+
+    }
+}*/
+
+
+// ----> Case 06(keyword 'this')
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void setSize(int length,int width,int height){
+         length=length;
+         width=width;
+         height=height;
+    }
+
+    public void printVolume(){
+         int volume;
+         volume = length*width*height;
+         System.out.println("Volume is "+volume);
+    }
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box();
+
+         b1.setSize(12,5,3);
+         b1.printVolume();
+
+    }
+}*/
+
+
+class MyClass{
+    int a;
+
+    public void myMethod(){
+         System.out.println(this);
+    } 
+
+}
+
+class Demo{
+    public static void main(String args[]){
+         MyClass m1=new MyClass();
+         System.out.println(m1);
+         m1.myMethod();
+
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 

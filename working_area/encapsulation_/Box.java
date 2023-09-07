@@ -75,12 +75,39 @@ class Box{
          height=h;
     }
 
+    public void printVolume(){
+         System.out.println("Volume is "+findVolume());
+    }
     public int findVolume(){
          return length*width*height;
     }
 
+    public void printArea(){
+         System.out.println("Area is "+findArea());
+    }
     public int findArea(){
          return 2*(length*width+length*height+width*height);
+    }
+
+    public void setLength(int l){
+         length=l;
+    }
+    public int getLength(){
+         return length;
+    }
+
+    public void setWidth(int w){
+         width=w;
+    }
+    public int getWidth(){
+         return width;
+    }
+
+    public void setHeight(int h){
+         height=h;
+    }
+    public int getHeight(){
+         return height;
     }
 
 }
