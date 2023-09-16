@@ -340,7 +340,8 @@ class Demo{
 }*/
 
 
-class MyClass{
+
+/*class MyClass{
     int a;
 
     public void myMethod(){
@@ -356,13 +357,494 @@ class Demo{
          m1.myMethod();
 
     }
+}*/
+
+
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void setSize(int length,int width,int height){
+         this.length=length;
+         this.width=width;
+         this.height=height;
+    }
+
+    public void printVolume(){
+         int volume;
+         volume = this.length*this.width*this.height;
+         System.out.println("Volume is "+volume);
+    }
 }
 
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box();
+
+         b1.setSize(12,5,3);
+         b1.printVolume();
+
+    }
+}*/
 
 
+// ----> Case 07(null Referencing)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void setSize(int length,int width,int height){
+         this.length=length;
+         this.width=width;
+         this.height=height;
+    }
+
+    public void printVolume(){
+         int volume;
+         volume = this.length*this.width*this.height;
+         System.out.println("Volume is "+volume);
+    }
+}
+
+class Demo{
+    public static void main(String args[]){
+         //Box b2=new Box();
+
+         Box b2=null;
+
+         b2.length=12;
+         b2.width=5;
+         b2.height=3;
+         //b2.x;
+
+         b2.printVolume();
+         b2.setSize(12,5,3);
+         //b2.copy();      
+    }
+}*/
 
 
+// ----> Case 08
 
+/*class Cat{
+
+}
+
+class Dog{
+
+}
+
+class Demo{
+    public static void main(String args[]){
+         Cat c1=new Cat();
+         Dog d1=new Dog();
+
+         //c1=d1;
+         //d1=c1;
+
+         Cat c2=new Dog();
+         Dog d2=new Cat();
+    }
+}*/
+
+
+// ----> Case 09(passing Object to method)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void setSize(int length,int width,int height){
+         this.length=length;
+         this.width=width;
+         this.height=height;
+    }
+  
+    public void printVolume(){
+         System.out.println("Volume is "+(this.length*this.width*this.height));
+    }
+
+    public void copyValuesFrom(Box b){
+         this.length=b.length;
+         this.width=b.width;
+         this.height=b.height;
+    }
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box();
+         b1.setSize(12,5,3);
+         b1.printVolume();
+ 
+         Box b2=new Box();
+         b2.copyValuesFrom(b1);
+         b2.printVolume();
+
+    }
+}*/
+
+
+// ----> Case 10(return object)
+
+/*class Date{
+    private int year;
+    private int month;
+    private int day;
+
+    public void setDate(int year,int month,int day){
+         this.year=year;
+         this.month=month;
+         this.day=day;
+    }
+
+    public void printDate(){
+         System.out.println(this.year+"-"+this.month+"-"+this.day);
+    }
+
+    public void setYear(int year){
+         this.year=year;
+    }
+
+    public void setMonth(int month){
+         this.month=month;
+    }
+
+    public void setDay(int day){
+         this.day=day;
+    }
+
+    public Date getCopy(){
+         Date d=new Date();
+         d.setDate(this.year,this.month,this.day);
+         //d.year=this.year;
+         //d.month=this.month;
+         //d.day=this.day;
+         return d;
+    }
+
+}
+
+class Demo{
+    public static void main(String args[]){
+         Date d1=new Date();
+         d1.setDate(2001,02,26);
+         d1.printDate();
+         System.out.println(d1);
+
+         Date d2=d1.getCopy();
+         d2.printDate();
+         System.out.println(d2);
+    }    
+
+}*/
+
+
+// ===============================================================================================================
+
+// ----> Object Initialization(Constructor)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    //compiler insert,
+    public Box(){       //class name, No return type,
+         length=0;
+         width=0;
+         height=0;
+    }
+}
+
+class Demo{
+    public static void main(String args[]){
+         Box b1=new Box(); // ---> "Box()"
+
+    }
+}*/
+
+
+// ----> Case 01(Default Constructor)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    //we create default constructor
+    public Box(){
+        length=1;
+        width=1;
+        height=1;
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         Box b1=new Box();
+    }
+}*/
+
+
+// ----> Case 02(Parameterize Constructor)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public Box(int l,int w,int h){
+        length=l;
+        width=w;
+        height=h;
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         Box b1=new Box(10,5,3);
+    }
+}*/
+
+
+// ----> Case 03(Constructor Overloading)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public Box(){
+        length=0;
+        width=0;
+        height=0;
+    }
+
+    public Box(int l,int w,int h){
+        length=l;
+        width=w;
+        height=h;
+    }
+
+    public Box(int x){
+        length=x;
+        width=x;
+        height=x;
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         Box b1=new Box();
+         Box b2=new Box(10,5,3);
+         Box b3=new Box(3);
+    }
+}*/
+
+
+// ---->Case 04(Illegale Calling)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public Box(){
+        length=0;
+        width=0;
+        height=0;
+    }
+
+    public Box(int l,int w,int h){
+        length=l;
+        width=w;
+        height=h;
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         Box b1=new Box(10,5,3);
+
+         b1.Box(); //think a littel bit,
+    }
+}*/
+
+
+// ---->Case 05(Constructor ---> Method)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public void Box(int l,int w,int h){
+        length=l;
+        width=w;
+        height=h;
+    }
+
+    public void printValue(){
+         System.out.println("length : "+this.length+"\n"+"width : "+this.width+"\n"+"heigth : "+this.height);
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         //Box b1=new Box(10,5,3); //Now, Not a Constructor, it has 'void' return type
+         Box b1=new Box();
+         b1.Box(10,5,3);
+         b1.printValue();
+    }
+}*/
+
+
+// ----> Case 06(If we create default OR parameterize constructor, 
+//               compiler not add default constructor)
+ 
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public Box(int l,int w,int h){
+        length=l;
+        width=w;
+        height=h;
+    }
+
+    public void printValue(){
+         System.out.println("length : "+this.length+"\n"+"width : "+this.width+"\n"+"heigth : "+this.height);
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         //Box b1=new Box(); //Illegale ---> compiler not add default constructor
+
+         b1.printValue();
+   
+    }
+}*/
+
+
+// ---->Case 07(Calling to the constructor in another constructor)
+
+/*class Box{
+    int length;
+    int width;
+    int height;
+
+    public Box(int l,int w,int h){
+        length=l;
+        width=w;
+        height=h;
+        System.out.println("Box(int,int,int)");
+    }
+
+    public Box(int x){
+        //length=x;
+        //width=x;
+        //height=x;
+        
+        //Box(x,x,x);  //Illegale
+        //System.out.println("Box(int)");  //Illegale
+
+        this(x,x,x);
+        System.out.println("Box(int)");  //Legale
+    }
+
+    public Box(){
+        //length=1;
+        //width=1;
+        //height=1;
+
+        //Box(1);  //Illegale
+        //System.out.println("Box()");  //Illegale
+
+        this(1); 
+        System.out.println("Box()");    //Legale       
+    }
+
+    public void printValue(){
+         System.out.println("length : "+this.length+"\n"+"width : "+this.width+"\n"+"heigth : "+this.height);
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         Box b1=new Box();
+         b1.printValue();
+    }
+}*/
+
+
+// ---->Case 08(Declaration Value)
+
+/*class Box{
+    int length=10;
+    int width=5;
+    int height;
+    
+    //Compiler Insert
+    //Box(){
+    //    length=l;
+    //    width=w;
+    //    height=h;
+    //}
+
+    public void printValue(){
+         System.out.println("length : "+this.length+"\n"+"width : "+this.width+"\n"+"heigth : "+this.height);
+    }
+}
+
+class Demo{
+    public static void main(String []args){
+         Box b1=new Box();
+
+         b1.printValue();
+   
+    }
+}*/
+
+
+/*class A{
+    int a=10;
+    int b=5;
+    int c;
+
+    A(){
+
+    }
+
+    A(int i,int j,int k){
+        a=i;
+        b=j;
+        c=k;
+    }
+
+}
+
+class Demo{
+    public static void main(String args[]){
+         A b1=new A();
+         System.out.println("b1 : "+b1.a+" "+b1.b+" "+b1.c);
+
+         A b2=new A(100,50,20);
+         System.out.println("b2 : "+b2.a+" "+b2.b+" "+b2.c);
+ 
+    }
+}*/
+
+
+// ---->Case 09(Instance Block)
 
 
 
