@@ -1,6 +1,6 @@
 // ---> 01) static variable(class variable / template variable)
 
-class MyClass{
+/*class MyClass{
     int a;
   
     static int x;
@@ -26,4 +26,37 @@ class Demo{
          System.out.println("c2 : "+c2.a+" "+c2.x);
          System.out.println("c3 : "+c3.a+" "+c3.x);
     }
-}
+}*/
+
+
+// ---> Template Object(Class) ---> JDK
+
+
+// ================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
