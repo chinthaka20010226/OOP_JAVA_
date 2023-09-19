@@ -846,6 +846,47 @@ class Demo{
 
 // ---->Case 09(Instance Block)
 
+/*class A{
+    int a;
+    int b;
+
+    {
+        System.out.println("I am a instance block...");
+    }
+}
+
+class Demo{
+    public static void main(String args[]){
+         A a1=new A();
+         A a2=new A();
+         A a3=new A();         
+
+    }
+}*/
+
+
+// ---->Case 10(Declaration value and instance block)
+
+
+class A{
+    int a=1;
+    
+
+    {
+        a=10;
+        b=20;
+    }
+
+    int b=2;
+}
+
+class Demo{
+    public static void main(String args[]){
+         A a1=new A();
+         System.out.println("a1 : "+a1.a+" "+a1.b);        
+
+    }
+}
 
 
 
