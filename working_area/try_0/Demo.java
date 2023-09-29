@@ -503,7 +503,7 @@ class Example{
 
 // ==============================================================================================================================
 
-class Example{
+/*class Example{
     public static boolean checkDuplicatesInOff(int[][] arr){
          for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length-1;j++){
@@ -626,6 +626,20 @@ class Example{
          }
          writeRandomInput(arr);
 
+    }
+}*/
+
+
+// =======================================================================================================
+
+
+class Example{
+    public static void main(String args[]){
+         int num=012;
+
+         for(int i=0;i<num;i++){
+            System.out.println(i);
+         }
     }
 }
 
