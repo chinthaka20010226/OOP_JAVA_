@@ -635,7 +635,7 @@ class Example{
 
 class Example{
     public static void main(String args[]){
-         int num=012;
+         int num=12;
 
          for(int i=0;i<num;i++){
             System.out.println(i);
