@@ -82,6 +82,20 @@ class List{
         }
     }
 
+    public int get(int idx){
+        if(idx < size()){
+           Node temp=start;
+           int i=0;
+
+           while(i < idx-1){
+              temp=temp.next;
+              i++;
+           }
+           return temp.data;
+        }
+        return -1;
+    }
+
     public int size(){
         Node temp=start;
         int size=0;
@@ -120,6 +134,9 @@ class Demo{
 
         l1.remove(2);
         l1.printList();
+        System.out.println("Size of List : "+l1.size());
+
+        System.out.println("third position data : "+l1.get(3));
     }
 }
 
